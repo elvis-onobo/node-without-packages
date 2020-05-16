@@ -13,7 +13,6 @@ var _data = require('./lib/data')
 _data.update('test', 'newFile', { 'Elvis': 'Onobo' }, function (err) {
 	console.log('There was an error', err)
 })
-// rtyheg
 
 // Instantiate HTTP server
 var httpServer = http.createServer(function (req, res) {

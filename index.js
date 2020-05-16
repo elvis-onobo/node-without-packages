@@ -9,10 +9,11 @@ var fs = require('fs')
 var config = require('./config')
 var _data = require('./lib/data')
 
-// testing _data.create()
+// testing _data.create
 _data.update('test', 'newFile', { 'Elvis': 'Onobo' }, function (err) {
 	console.log('There was an error', err)
 })
+// rtyheg
 
 // Instantiate HTTP server
 var httpServer = http.createServer(function (req, res) {

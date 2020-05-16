@@ -4,7 +4,7 @@ var environments = {}
 
 // staging default env
 environments.staging = {
-	'portPort': 3000,
+	'httpPort': 3000,
 	'httpsPort': 3001,
 	'envName': 'staging'
 }

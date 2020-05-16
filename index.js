@@ -1,10 +1,18 @@
-// dependencies
+// node dependencies
 var http = require('http')
 var https = require('https')
 var url = require('url')
 var stringDecoder = require('string_decoder').StringDecoder
-var config = require('./config')
 var fs = require('fs')
+
+// local files
+var config = require('./config')
+var _data = require('./lib/data')
+
+// testing _data.create()
+// _data.delete('test', 'newFile', function (err) {
+// 	console.log('There was an error', err)
+// })
 
 // Instantiate HTTP server
 var httpServer = http.createServer(function (req, res) {
@@ -104,10 +112,9 @@ var unifiedServer = function (req, res) {
 // define the handlers
 var handlers = {}
 
-// sample handler
-handlers.sample = function (data, callback) {
-	// callback HTTP status code and payload object
-	callback(406, { 'name': 'sample handler' })
+// ping handler
+handlers.ping = function (data, callback) {
+	callback(200)
 }
 
 handlers.notFound = function (data, callback) {
@@ -115,5 +122,5 @@ handlers.notFound = function (data, callback) {
 }
 
 var router = {
-	'sample': handlers.sample
+	'ping': handlers.ping
 }

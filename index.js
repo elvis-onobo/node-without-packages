@@ -10,9 +10,9 @@ var config = require('./config')
 var _data = require('./lib/data')
 
 // testing _data.create()
-// _data.delete('test', 'newFile', function (err) {
-// 	console.log('There was an error', err)
-// })
+_data.update('test', 'newFile', { 'Elvis': 'Onobo' }, function (err) {
+	console.log('There was an error', err)
+})
 
 // Instantiate HTTP server
 var httpServer = http.createServer(function (req, res) {

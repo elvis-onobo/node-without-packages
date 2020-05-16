@@ -8,7 +8,7 @@ var fs = require('fs')
 // local files
 var config = require('./config')
 var _data = require('./lib/data')
-
+dfsdgfgh
 // testing _data.create
 _data.update('test', 'newFile', { 'Elvis': 'Onobo' }, function (err) {
 	console.log('There was an error', err)
